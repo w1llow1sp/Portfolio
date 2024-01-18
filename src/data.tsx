@@ -83,7 +83,7 @@ export const links : Array<LinksType> = [
   },
 ];
 
-export const personalInfo = [
+export const personalInfo : Array<personalInfoType> = [
   {
     id: 1,
     title: 'First Name : ',
@@ -145,7 +145,7 @@ export const personalInfo = [
   },
 ];
 
-export const stats = [
+export const stats : Array<statsType>= [
   {
     id: 1,
     no: '2+',
@@ -156,6 +156,12 @@ export const stats = [
     id: 2,
     no: '10+',
     title: 'Completed <br /> Projects',
+  },
+
+  {
+    id: 3,
+    no: '10+',
+    title: ' Certificates  <br /> Received',
   },
 
   {
@@ -821,4 +827,16 @@ export const themes = [
   name: string,
   icon:  JSX.Element,
   path: string,
+}
+
+export  type personalInfoType = {
+  id: number
+  title: string
+  description: string
+}
+
+export type statsType = {
+  id:number
+  no: string
+  title: string
 }
