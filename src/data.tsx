@@ -53,7 +53,7 @@ import Theme8 from './assets/orange.png';
 import Theme9 from './assets/green.png';
 import Theme10 from './assets/yellow.png';
 
-export const links = [
+export const links : Array<LinksType> = [
   {
     id: 1,
     name: 'Home',
@@ -815,3 +815,10 @@ export const themes = [
     color: 'hsl(42, 100%, 50%)',
   },
 ];
+
+ export type LinksType = {
+  id: number,
+  name: string,
+  icon:  JSX.Element,
+  path: string,
+}
