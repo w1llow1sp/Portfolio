@@ -1,7 +1,7 @@
 import React from 'react';
 import {skills} from "../../data";
 
-import {CircularProgressbar} from 'react-circular-progressbar';
+import {CircularProgressbarWithChildren} from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 
 import './skills.css'
@@ -9,16 +9,19 @@ import './skills.css'
 const Skills = () => {
     return (
         <>
-            {skills.map(({title, percentage}, index) => {
+            {skills.map(({title, percentage, img}, index) => {
                 return (
                     <div className={'progress__box'} key={index}>
                         <div className="progress__circle">
-                            <CircularProgressbar
+                            <CircularProgressbarWithChildren
                                 strokeWidth={7.5}
-                                text={`${percentage}%`}
                                 value={percentage}
 
-                            />
+                            >
+                                <div className={'progress__label '}>{img}</div>
+                                <div className={'progress__text'}>{`${percentage}%`}</div>
+                            </CircularProgressbarWithChildren>
+
                         </div>
                         <h3 className="skills__title">
                             {title}

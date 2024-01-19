@@ -27,6 +27,24 @@ import Work14 from './assets/Work14.png'
 import Work15 from './assets/Work15.png'
 import Work16 from './assets/Work16.png'
 
+/*import TS from './assets/icons/TS.svg'
+import JS from './assets/icons/JS.svg'
+import REACT from './assets/icons/React.svg'
+import ANG from './assets/icons/Angular.svg'
+import NEXT from './assets/icons/NextJS.svg'
+import REDUX from './assets/icons/Redux.svg'
+import REDUXTOOL from './assets/icons/Redux.svg'
+import API from './assets/icons/api.svg'
+import STORYBOOK from './assets/icons/storybook.svg'
+import UNIT from './assets/icons/Jest.svg'
+import JASMINE from './assets/icons/Jasmine.svg'
+import UILIB from './assets/icons/UI.svg'
+import FIGMA from './assets/icons/figma.svg'
+import STYLED from './assets/icons/styled.svg'
+import HTML5 from './assets/icons/Html.svg'
+import CSS3 from './assets/icons/CSS.svg'
+import SASS from './assets/icons/Sass.svg'*/
+
 
 import Theme1 from './assets/purple.png';
 import Theme2 from './assets/red.png';
@@ -38,6 +56,18 @@ import Theme7 from './assets/yellowgreen.png';
 import Theme8 from './assets/orange.png';
 import Theme9 from './assets/green.png';
 import Theme10 from './assets/yellow.png';
+import {
+    SiAngular, SiFigma, SiJasmine,
+    SiJavascript,
+    SiJest,
+    SiNextdotjs,
+    SiReact,
+    SiRedux,
+    SiStorybook, SiStyledcomponents, SiTailwindcss,
+    SiTypescript
+} from "react-icons/si";
+import {IoLogoCss3, IoLogoHtml5, IoLogoSass} from "react-icons/io";
+import {TbApi} from "react-icons/tb";
 
 
 {/* ======  TYPES ===== */
@@ -65,6 +95,7 @@ export type skillsType = {
     id: number
     title: string
     percentage: string
+    img:any
 }
 
 export  type resumeType = {
@@ -281,84 +312,102 @@ export const skills: Array<skillsType> = [
         id: 1,
         title: 'Typescript',
         percentage: '70',
+        img:<SiTypescript />
+
     },
     {
         id: 2,
         title: 'JavaScript',
         percentage: '80',
+        img:<SiJavascript />
     },
     {
         id: 3,
         title: 'React',
         percentage: '85',
+        img:<SiReact />
     }, {
         id: 4,
         title: 'Angular',
         percentage: '60',
+        img:<SiAngular />
     },
     {
         id: 5,
         title: 'NextJS',
         percentage: '70',
+        img:<SiNextdotjs />
     },
     {
         id: 6,
         title: 'Redux',
         percentage: '70',
+        img:<SiRedux />
     },
     {
         id: 7,
         title: 'Redux Toolkit',
         percentage: '40',
+        img:<SiRedux />
     },
     {
         id: 8,
         title: 'Rest API',
         percentage: '80',
+        img:<TbApi />
     },
     {
         id: 9,
         title: 'Storybook',
         percentage: '70',
+        img:<SiStorybook />
     },
     {
         id: 10,
         title: 'Unit Testing',
         percentage: '70',
+        img:<SiJest />
     },
     {
         id: 11,
         title: 'Jasmine',
         percentage: '60',
+        img:<SiJasmine />
     },
     {
         id: 12,
         title: 'UI Library',
         percentage: '90',
+        img:<SiTailwindcss />
     },
     {
         id: 13,
         title: 'Figma',
         percentage: '80',
+        img:<SiFigma />
     },
     {
         id: 14,
         title: 'Styled Components',
         percentage: '75',
+        img:<SiStyledcomponents />
     },
     {
         id: 15,
         title: 'HTML',
         percentage: '80',
+        img:<IoLogoHtml5 />
     },
     {
         id: 16,
         title: 'CSS',
         percentage: '80',
+        img:<IoLogoCss3 />
     }, {
         id: 17,
         title: 'SAAS/LESS/SCSS',
         percentage: '70',
+        img:<IoLogoSass />
     },
 
 ];
