@@ -1,6 +1,6 @@
 import React from 'react';
-import {personalInfo} from "../data";
-import '../pages/about/about.css'
+import {personalInfo} from "../../data";
+import '../../pages/about/about.css'
 
 const Info = () => {
     return (
