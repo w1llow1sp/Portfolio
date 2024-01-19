@@ -607,7 +607,7 @@ export const portfolio:portfolioType[] =[
             {
                 icon: <FiExternalLink/>,
                 title: 'Preview : ',
-                desc: 'https://github.com/w1llow1sp/ParalaxHtml',
+                desc: 'https://w1llow1sp.github.io/ParalaxHtml/',
             },
         ],
     },
@@ -719,7 +719,7 @@ export const portfolio:portfolioType[] =[
             {
                 icon: <FiExternalLink/>,
                 title: 'Preview : ',
-                desc: 'https://github.com/w1llow1sp/React-Movie/deployments/github-pages',
+                desc: 'https://w1llow1sp.github.io/Batman_2/',
             },
         ],
     },
