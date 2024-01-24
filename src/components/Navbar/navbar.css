@@ -6,6 +6,7 @@
     width: 100%;
     padding: 60px 30px;
     transition: all 0.5s cubic-bezier(0.77, 0.2 ,0.05,1);
+    z-index: 100;
 }
 
 .show-menu {
@@ -30,6 +31,10 @@
     font-weight: var(--weigth-500);
 }
 
+.darktheme .nav__link {
+    border-color:hsl(0,0%,20%) ;
+}
+
 .active-nav .nav__icon,
 .active-nav .nav__name {
     color:var(--first-color)
@@ -45,6 +50,7 @@
     border-radius: 5px;
     background-color: var(--container-color);
     padding: 12px 10px;
+    z-index: 100;
 }
 
 .nav__toggle span {
@@ -83,6 +89,7 @@
         right: 30px;
         display: flex;
         align-items: center;
+        z-index: 100;
 
     }
 
@@ -105,9 +112,7 @@
         margin-inline: auto;
     }
 
-    .darktheme .nav__link {
-        border-color:hsl(0,0%,20%) ;
-    }
+
 
     .nav__name {
         position: absolute;
