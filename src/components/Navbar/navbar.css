@@ -105,6 +105,10 @@
         margin-inline: auto;
     }
 
+    .darktheme .nav__link {
+        border-color:hsl(0,0%,20%) ;
+    }
+
     .nav__name {
         position: absolute;
         top: 0;
