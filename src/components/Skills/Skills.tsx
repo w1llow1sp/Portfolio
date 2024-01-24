@@ -1,5 +1,5 @@
 import React from 'react';
-import {skills} from "../../data";
+import {skills} from "../../helpers/data";
 
 import {CircularProgressbarWithChildren} from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';

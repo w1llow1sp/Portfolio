@@ -1,5 +1,5 @@
 import React from 'react';
-import {stats} from "../../data";
+import {stats} from "../../helpers/data";
 import parse from 'html-react-parser'
 import '../../pages/about/about.css'
 

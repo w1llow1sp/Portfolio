@@ -10,22 +10,22 @@ import {
 import {FiFileText, FiUser, FiExternalLink} from 'react-icons/fi';
 
 
-import Work1 from './assets/Work1.png'
-import Work2 from './assets/Work2.png'
-import Work3 from './assets/Work3.png'
-import Work4 from './assets/Work4.png'
-import Work5 from './assets/Work5.png'
-import Work6 from './assets/Work6.png'
-import Work7 from './assets/Work7.png'
-import Work8 from './assets/Work8.png'
-import Work9 from './assets/Work9.png'
-import Work10 from './assets/Work10.png'
-import Work11 from './assets/Work11.png'
-import Work12 from './assets/Work12.png'
-import Work13 from './assets/Work13.png'
-import Work14 from './assets/Work14.png'
-import Work15 from './assets/Work15.png'
-import Work16 from './assets/Work16.png'
+import Work1 from '../assets/Work1.png'
+import Work2 from '../assets/Work2.png'
+import Work3 from '../assets/Work3.png'
+import Work4 from '../assets/Work4.png'
+import Work5 from '../assets/Work5.png'
+import Work6 from '../assets/Work6.png'
+import Work7 from '../assets/Work7.png'
+import Work8 from '../assets/Work8.png'
+import Work9 from '../assets/Work9.png'
+import Work10 from '../assets/Work10.png'
+import Work11 from '../assets/Work11.png'
+import Work12 from '../assets/Work12.png'
+import Work13 from '../assets/Work13.png'
+import Work14 from '../assets/Work14.png'
+import Work15 from '../assets/Work15.png'
+import Work16 from '../assets/Work16.png'
 
 /*import TS from './assets/icons/TS.svg'
 import JS from './assets/icons/JS.svg'
@@ -46,16 +46,16 @@ import CSS3 from './assets/icons/CSS.svg'
 import SASS from './assets/icons/Sass.svg'*/
 
 
-import Theme1 from './assets/purple.png';
-import Theme2 from './assets/red.png';
-import Theme3 from './assets/blueviolet.png';
-import Theme4 from './assets/blue.png';
-import Theme5 from './assets/goldenrod.png';
-import Theme6 from './assets/magenta.png';
-import Theme7 from './assets/yellowgreen.png';
-import Theme8 from './assets/orange.png';
-import Theme9 from './assets/green.png';
-import Theme10 from './assets/yellow.png';
+import Theme1 from '../assets/purple.png';
+import Theme2 from '../assets/red.png';
+import Theme3 from '../assets/blueviolet.png';
+import Theme4 from '../assets/blue.png';
+import Theme5 from '../assets/goldenrod.png';
+import Theme6 from '../assets/magenta.png';
+import Theme7 from '../assets/yellowgreen.png';
+import Theme8 from '../assets/orange.png';
+import Theme9 from '../assets/green.png';
+import Theme10 from '../assets/yellow.png';
 import {
     SiAngular, SiFigma, SiJasmine,
     SiJavascript,

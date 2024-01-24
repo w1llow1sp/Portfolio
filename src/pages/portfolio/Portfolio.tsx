@@ -1,6 +1,7 @@
-import {portfolio} from "../../data";
+import {portfolio} from "../../helpers/data";
 import PortfolioItem from "../../components/Portfolio/PortfolioItem";
 import './portfolio.css'
+import transition, {slideIn} from "../../helpers/transition";
 
 
 const Portfolio = () => {
@@ -20,4 +21,4 @@ const Portfolio = () => {
     );
 };
 
-export default Portfolio;
+export default  transition(Portfolio);
