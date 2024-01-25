@@ -6,31 +6,19 @@ import EN from '../../assets/en.svg'
 //import components
 import ThemeItem from "./ThemeItem";
 //import data
-import {themes} from "../../helpers/data";
+
 //import icons
 import {FaCog} from "react-icons/fa";
 import {BsSun, BsMoon, BsTranslate} from "react-icons/bs";
 //
 import { useTranslation } from "react-i18next";
-
-const getStorageColor = () => {
-    let color = 'hsl(252,35%,51%)';
-    if (localStorage.getItem('color')) {
-        color = localStorage.getItem('color')
-
-    }
-    return color
-}
+import {themes} from "../../../constants";
+import {getStorageColor} from "../../utils/localStorage/getStorageColor";
+import {getStorageTheme} from "../../utils/localStorage/getStorageTheme";
 
 
-const getStorageTheme = () => {
-    let theme = 'light-theme';
-    if (localStorage.getItem('theme')) {
-        theme = localStorage.getItem('theme')
-    }
 
-    return theme
-}
+
 
 
 const Themes = () => {
@@ -71,6 +59,10 @@ const Themes = () => {
         document.documentElement.className = theme;
         localStorage.setItem('theme', theme)
     }, [theme]);
+
+    useEffect(() => {
+
+    }, []);
 
 
     return (

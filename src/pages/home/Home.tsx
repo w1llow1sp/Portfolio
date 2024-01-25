@@ -1,23 +1,20 @@
-
-
-
 //import React
 import React from "react";
 //import styles
 import './home.css'
 //import components
-import { motion } from "framer-motion";
-
-
 import Profile from '../../assets/home.jpg'
+//import React Router Dom
 import { Link } from 'react-router-dom'
+//import transition
+import { motion } from "framer-motion";
+import transition, {slideIn} from "../../utils/transition";
+//import icons
 import { FaArrowRight } from "react-icons/fa";
-import transition, {slideIn} from "../../helpers/transition";
-import {useTranslation} from "react-i18next";
-
+// import translation
+import { t } from 'i18next';
 
 const Home = React.memo(() => {
-    const {t,i18n} = useTranslation()
 
     return (
         <section className={'home section grid'}>
@@ -38,17 +35,16 @@ const Home = React.memo(() => {
                     animate="show"
                 >
                     <h1 className="home__title">
-                        <span>I`m Mariya Mokeeva.</span>
-                        Frontend Developer
+                        <span>{t('home.title.hi')}</span>
+                        {t('home.title.text')}
                     </h1>
 
                     <p className="home__description">
-                        I`m Russia based front-end developer focused on crafting clear and user-friendly experiences. I
-                        am passionate about building excellent software that improves the lives of those around me.
+                        {t('home.description.text')}
                     </p>
 
                     <Link to={'/about'} className={'button'}>
-                        More About Me
+                        {t('home.buttonText.text')}
                         <span className={'button__icon'}>
                            <FaArrowRight/>
                         </span>
@@ -60,7 +56,6 @@ const Home = React.memo(() => {
         </section>
     );
 })
-
 export default transition(Home);
 
 

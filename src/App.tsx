@@ -12,13 +12,19 @@ import Themes from "./components/Themes/Themes";
 // import animation for routing
 import {AnimatePresence} from "framer-motion";
 //import i18n
-import {memo, Suspense} from "react";
+import {memo, Suspense, useEffect} from "react";
 import {useTranslation } from "react-i18next";
 // остальной код
 
 const App = memo(() => {
     const location = useLocation()
-    const {t,i18n} = useTranslation()
+    const {i18n} = useTranslation()
+
+    useEffect(() => {
+        const lng = localStorage.getItem('lng') || 'ru';
+
+        i18n.changeLanguage(lng);
+    }, [i18n]);
 
     return (
         <>

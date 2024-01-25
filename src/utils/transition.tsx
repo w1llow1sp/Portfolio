@@ -35,3 +35,12 @@ export default transition
         },
     },
 };
+
+export const itemVariants = {
+    hidden: { scale: 0.8, boxShadow: "none" },
+    visible: {
+        scale: 1,
+        boxShadow: "0px 0px 10px rgba(0,0,0,0.2)",
+        transition: { duration: 0.5 },
+    },
+};

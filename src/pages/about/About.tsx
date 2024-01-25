@@ -1,24 +1,32 @@
-import { motion } from "framer-motion";
+import React from "react";
+//import styles
+import './about.css'
+//import components
 import Info from "../../components/Info/Info";
 import Stats from "../../components/Stats/Stats";
-import { FaDownload } from "react-icons/fa";
-import CV from '../../assets/CV.pdf'
-
-import './about.css'
-import Skills from "../../components/Skills/Skills";
-import { resume } from "../../helpers/data";
 import ResumeItem from "../../components/Resume/ResumeItem";
-import transition, {slideIn} from "../../helpers/transition";
+import Skills from "../../components/Skills/Skills";
+//import transition
+import { motion } from "framer-motion";
+import transition, {slideIn} from "../../utils/transition";
+//import icons
+import { FaDownload } from "react-icons/fa";
+//import CV
+import CV from '../../assets/CV.pdf'
+// import translation
+import { t } from 'i18next';
+//import constants
+import {experienceAndEducation, sectionAboutText, skillsData} from "../../../constants";
 
-
-
-const About = () => {
+const About = React.memo(
+    () => {
     return (
         <main className="section container">
             {/* ===SECTION ABOUT START===   */}
             <section className="about">
                 <h2 className="section__title">
-                    About <span>Me</span>
+                    {t(sectionAboutText.header.header)}
+                    <span> {t(sectionAboutText.header.spanName)}</span>
                 </h2>
                 <div className="about__container grid">
                     <motion.div
@@ -33,7 +41,7 @@ const About = () => {
                         </ul>
 
                         <a href={CV} download={''} className="button">
-                            Download CV{''}
+                            {t(sectionAboutText.buttonText.text)}{''}
                             <span className="button__icon"> <FaDownload/></span>
                         </a>
                     </motion.div>
@@ -54,7 +62,7 @@ const About = () => {
             {/* ===SECTION SKILLS START=== */}
             <section className={'skills'}>
                 <h3 className={'section__subtitle subtitle__center'}>
-                    My Skills
+                    {t(skillsData.title)}
                 </h3>
 
                 <motion.div
@@ -73,7 +81,7 @@ const About = () => {
             {/* ===SECTION RESUME START=== */}
             <section className="resume">
                 <h3 className={'section__subtitle subtitle__center'}>
-                    Experience & Education
+                    {t(experienceAndEducation.header)}
                 </h3>
                 <motion.div
                     className="resume__container grid"
@@ -82,17 +90,28 @@ const About = () => {
                     animate="show"
                 >
                     <div className="resume__data">
-                        {resume.map((value) => {
+                        {experienceAndEducation.details.map((value) => {
                             if(value.category==='experience') {
-                                return <ResumeItem key={value.id} {...value}/>
+                                return <ResumeItem
+                                    key={value.id}
+                                    icon={value.icon}
+                                    year={value.year}
+                                    title={value.title}
+                                    desc={value.desc}
+                                />
                             }
                         })}
                     </div>
 
                     <div className="resume__data">
-                        {resume.map((value) => {
+                        {experienceAndEducation.details.map((value) => {
                             if(value.category==='education') {
-                                return <ResumeItem key={value.id} {...value}/>
+                                return <ResumeItem
+                                    key={value.id}
+                                    icon={value.icon}
+                                    year={value.year}
+                                    title={value.title}
+                                    desc={value.desc}/>
                             }
                         })}
                     </div>
@@ -102,94 +121,7 @@ const About = () => {
             {/* ===SECTION RESUME END=== */}
         </main>
     );
-};
-
+})
 export default transition(About);
 
 
-/*
-import Info from "../../components/Info/Info";
-import Stats from "../../components/Stats/Stats";
-import {FaDownload} from "react-icons/fa";
-import CV from '../../assets/CV.pdf'
-
-import './about.css'
-import Skills from "../../components/Skills/Skills";
-import {resume} from "../../helpers/data";
-import ResumeItem from "../../components/Resume/ResumeItem";
-import transition from "../../helpers/transition";
-
-const About = () => {
-    return (
-        <main className="section container">
-            {/!* ===SECTION ABOUT START===   *!/}
-            <section className="about">
-                <h2 className="section__title">
-                    About <span>Me</span>
-                </h2>
-                <div className="about__container grid">
-                    <div className="about__info">
-                        <h3 className='section__subtitle'>Personal Infos</h3>
-                        <ul className="info__list grid">
-                            <Info/>
-                        </ul>
-
-                        <a href={CV} download={''} className="button">
-                            Download CV{''}
-                            <span className="button__icon"> <FaDownload/></span>
-                        </a>
-                    </div>
-
-                    <div className="stats grid">
-                        <Stats/>
-                    </div>
-                </div>
-            </section>
-            <div className="separator"></div>
-            {/!* ===SECTION ABOUT END===   *!/}
-
-            {/!* ===SECTION SKILLS START=== *!/}
-            <section className={'skills'}>
-                <h3 className={'section__subtitle subtitle__center'}>
-                    My Skills
-                </h3>
-
-                <div className="skills__container grid">
-                    <Skills/>
-                </div>
-
-
-            </section>
-            <div className="separator"></div>
-            {/!* ===SECTION SKILLS END=== *!/}
-
-            {/!* ===SECTION RESUME START=== *!/}
-            <section className="resume">
-                <h3 className={'section__subtitle subtitle__center'}>
-                    Experience & Education
-                </h3>
-                <div className="resume__container grid">
-                    <div className="resume__data">
-                        {resume.map((value) => {
-                            if(value.category==='experience') {
-                                return <ResumeItem key={value.id} {...value}/>
-                            }
-                        })}
-                    </div>
-
-                    <div className="resume__data">
-                        {resume.map((value) => {
-                            if(value.category==='education') {
-                                return <ResumeItem key={value.id} {...value}/>
-                            }
-                        })}
-                    </div>
-                </div>
-            </section>
-            <div className="separator"></div>
-            {/!* ===SECTION RESUME END=== *!/}
-        </main>
-    );
-};
-
-export default transition(About);*/

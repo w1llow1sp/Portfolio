@@ -1,15 +1,17 @@
 import React from 'react';
-import {skills} from "../../helpers/data";
-
+//import styles
+import './skills.css'
+//import circular progressbar
 import {CircularProgressbarWithChildren} from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
+// import constants
+import {skillsData} from "../../../constants";
 
-import './skills.css'
-
-const Skills = () => {
+const Skills = React.memo(
+    () => {
     return (
         <>
-            {skills.map(({title, percentage, img}, index) => {
+            {skillsData.items.map(({title, percentage, img}, index) => {
                 return (
                     <div className={'progress__box'} key={index}>
                         <div className="progress__circle">
@@ -32,6 +34,6 @@ const Skills = () => {
             })}
         </>
     );
-};
+})
 
 export default Skills;
