@@ -1,10 +1,7 @@
 //import styles
 import './about.css'
 //import components
-import Info from "../../components/Info/Info";
-import Stats from "../../components/Stats/Stats";
-import ResumeItem from "../../components/Resume/ResumeItem";
-import Skills from "../../components/Skills/Skills";
+import {Info, ResumeItem, Skills, Stats} from "../../components";
 //import transition
 import { motion } from "framer-motion";
 import transition, {slideIn} from "../../utils/transition";
@@ -16,6 +13,7 @@ import CV from '../../assets/CV.pdf'
 import { t } from 'i18next';
 //import constants
 import {experienceAndEducation, sectionAboutText, skillsData} from "../../constants";
+
 
 const About =
     () => {

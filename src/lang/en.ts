@@ -569,6 +569,9 @@ const en = {
                 message:'Your Message',
                 btnText:'Send Message'
             }
+        },
+        themeSwitcher: {
+            header:'Style Switcher'
         }
     }
 }

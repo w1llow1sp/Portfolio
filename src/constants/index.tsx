@@ -4,7 +4,7 @@ import {
     experienceAndEducationType, linksDataType,
     personalInfoDataType, portfolioDataType,
     sectionAboutTextType, skillsDataType,
-    statsDataType, themesType
+    statsDataType, themeHeaderType, themesType
 } from "./types";
 import {FiExternalLink, FiFileText, FiUser} from "react-icons/fi";
 
@@ -35,7 +35,7 @@ import Theme7 from '../assets/yellowgreen.png';
 import Theme8 from '../assets/orange.png';
 import Theme9 from '../assets/green.png';
 import Theme10 from '../assets/yellow.png';
-
+// import icons
 import {
     SiAngular, SiFigma, SiJasmine,
     SiJavascript,
@@ -48,8 +48,6 @@ import {
 } from "react-icons/si";
 import {TbApi} from "react-icons/tb";
 import {IoLogoCss3, IoLogoHtml5, IoLogoSass} from "react-icons/io";
-
-
 
 export const navLinksData: Array<linksDataType> = [
     {
@@ -838,4 +836,7 @@ export const themes:themesType[] = [
         color: 'hsl(42, 100%, 50%)',
     },
 ];
+export const themeHeader : themeHeaderType = {
+    header:'themeSwitcher.header'
+}
 

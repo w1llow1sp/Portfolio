@@ -8,8 +8,7 @@ import { t } from "i18next";
 // import constants
 import { navLinksData} from "../../constants";
 
-const Navbar =
-    () => {
+const Navbar = () => {
 
         const [showMenu,setShowMenu] = useState<boolean>(false)
 

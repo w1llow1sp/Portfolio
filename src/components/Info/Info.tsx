@@ -1,4 +1,3 @@
-
 //import styles
 import '../../pages/about/about.css'
 // import translation

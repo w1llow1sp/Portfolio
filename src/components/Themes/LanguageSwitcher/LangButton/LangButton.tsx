@@ -2,24 +2,25 @@ import {useState} from "react";
 // import translation
 import {useTranslation} from "react-i18next";
 // import styles
-import styles from './LangButton.module.css'
+import  './LangButton.css'
 
-export type LangButtonPropsType  = {
+export type LangButtonPropsType = {
     img:any
     modalFunction:(isLangModalOpen:boolean) => void
     isLangModalOpen:boolean
     lang:string
+    activeLang: string
 }
+
 
 const LangButton = ({
                         img,
                         modalFunction,
                         isLangModalOpen,
-                        lang
+                        lang,
+                        activeLang
                     }:LangButtonPropsType) => {
-
     const {i18n} = useTranslation();
-    const [isActive, setIsActive] = useState(false);
 
     const changeLanguage = (currentLang: string) => {
         i18n.changeLanguage(currentLang);
@@ -27,24 +28,21 @@ const LangButton = ({
     };
 
     const handleButtonClick = (lang: string) => {
-        setIsActive(!isActive);
         modalFunction(!isLangModalOpen)
         changeLanguage(lang);
-
     }
 
-        return (
-            <>
-                <button
-                    className={`${styles.langBtn} ${isActive ? `${styles.active}` : ''}`}
-                    onClick={() => handleButtonClick(lang)}>
-                    <img src={img}
-                         alt=""
-                         className={styles.langIcon}/>
-                </button>
-
-            </>
-        );
-    };
+    return (
+        <>
+            <button
+                className={'lang__btn'}
+                onClick={() => handleButtonClick(lang)}>
+                <img src={img}
+                     alt=""
+                     className={'lang__icon'}/>
+            </button>
+        </>
+    );
+};
 
 export default LangButton;

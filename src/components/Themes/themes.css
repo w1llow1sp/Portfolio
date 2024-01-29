@@ -113,34 +113,9 @@
 }
 
 
-/*Lang*/
-
-
-
-
-/*
-.lang__icon {
-    width: 30px;
-    height: 30px;
-
-
-}
-*/
-
 .lang__container {
     display: grid;
     grid-template-columns: repeat(3,1fr);
 }
 
-/*.lang__btn {
-    padding: 0;
-    margin: 0;
-    border-radius: 50%;
-
-}*/
-/*.lang__btn :active
-.active{
-    border: 5px solid var(--first-color);
-    transition: border 0.5s ease;
-}*/
 

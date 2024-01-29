@@ -6,16 +6,15 @@ import EN from '../../assets/en.svg'
 //import components
 import ThemeItem from "./ThemeItem";
 //import data
-
 //import icons
 import {FaCog} from "react-icons/fa";
 import {BsSun, BsMoon, BsTranslate} from "react-icons/bs";
 //
-import {useTranslation} from "react-i18next";
-import {themes} from "../../constants";
+import {t} from 'i18next';
+import {themeHeader, themes} from "../../constants";
 import {getStorageColor} from "../../utils/localStorage/getStorageColor";
 import {getStorageTheme} from "../../utils/localStorage/getStorageTheme";
-import LangButton from "./LangButton/LangButton";
+import LangButton from "./LanguageSwitcher/LangButton/LangButton";
 
 
 const Themes = () => {
@@ -24,13 +23,7 @@ const Themes = () => {
     const [color, setColor] = useState<string>(getStorageColor());
     const [theme, setTheme] = useState(getStorageTheme());
     const [isLangModalOpen, setIsLangModalOpen] = useState(false);
-
-
-/*    const handleButtonClick = (lang:string) => {
-        setIsActive(!isActive);
-        setIsLangModalOpen(!isLangModalOpen)
-        changeLanguage(lang)
-    }*/
+    const [activeLang, setActiveLang] = useState('');
 
 
     const changeColor = (color: string) => {
@@ -82,7 +75,9 @@ const Themes = () => {
 
 
                 {/*Styles switcher modal*/}
-                <h3 className="style__switcher-title">Style Switcher</h3>
+                <h3 className="style__switcher-title">
+                    {t(themeHeader.header)}
+                </h3>
                 <div className="style__switcher-items">
                     {themes.map((theme, index) => {
                         return (
@@ -90,7 +85,6 @@ const Themes = () => {
                         )
                     })}
                 </div>
-
                 <div className="style__switcher-close" onClick={() => setShowSwitcher(!showSwitcher)}>&times;</div>
                 {/*Styles switcher modal*/}
 
@@ -100,17 +94,19 @@ const Themes = () => {
             <div className={`${isLangModalOpen ? 'show-switcher-lang' : ''} lang__switcher`}>
                 <div className={'lang__container'}>
                     <LangButton
-                    img={RU}
-                    lang={'ru'}
-                    modalFunction={()=>setIsLangModalOpen(!isLangModalOpen)}
-                    isLangModalOpen={isLangModalOpen}
+                        img={RU}
+                        lang={'ru'}
+                        modalFunction={() => setIsLangModalOpen(!isLangModalOpen)}
+                        isLangModalOpen={isLangModalOpen}
+                        activeLang={activeLang}
                     />
                     <LangButton
                         img={EN}
                         lang={'en'}
-                        modalFunction={()=>setIsLangModalOpen(!isLangModalOpen)}
+                        modalFunction={() => setIsLangModalOpen(!isLangModalOpen)}
                         isLangModalOpen={isLangModalOpen}
-                        />
+                        activeLang={activeLang}
+                    />
 
                     <div
                         className="style__switcher-close"

@@ -1,19 +1,19 @@
+// import React
+import {memo, useEffect} from "react";
 //import React Router Dom
 import {Routes,Route, useLocation} from "react-router-dom";
 // import styles
 import './App.css'
-//import components
-import Home from "./pages/home/Home";
-import About from "./pages/about/About";
-import Portfolio from "./pages/portfolio/Portfolio";
-import Contact from "./pages/contact/Contact";
-import Navbar from "./components/Navbar/Navbar";
-import Themes from "./components/Themes/Themes";
+//import pages
+import {About, Contact, Home, Portfolio} from "./pages";
+// import components
+import {Navbar, Themes} from "./components";
 // import animation for routing
 import {AnimatePresence} from "framer-motion";
 //import i18n
-import {memo, useEffect} from "react";
 import {useTranslation } from "react-i18next";
+
+
 // остальной код
 
 

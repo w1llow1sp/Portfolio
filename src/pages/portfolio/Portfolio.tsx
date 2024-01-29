@@ -1,13 +1,14 @@
 // import styles
 import './portfolio.css'
 // import components
-import PortfolioItem from "../../components/Portfolio/PortfolioItem";
+import {PortfolioItem} from "../../components";
 // import animations
 import transition from "../../utils/transition";
 // import constants
 import {portfolioData} from "../../constants";
 //import translation
 import { t } from "i18next";
+
 
 
 const Portfolio =

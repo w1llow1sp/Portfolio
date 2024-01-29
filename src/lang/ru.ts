@@ -568,6 +568,9 @@ const ru = {
                 message:'Ваше сообщение',
                 btnText:'Отправить сообщение'
             }
+        },
+        themeSwitcher: {
+            header:'Переключатель стилей'
         }
 
     }

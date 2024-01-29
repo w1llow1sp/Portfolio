@@ -126,3 +126,7 @@ export type themesType = {
     color: string
 }
 
+export type themeHeaderType = {
+    header:string
+}
+
