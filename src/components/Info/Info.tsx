@@ -1,13 +1,12 @@
-import React from 'react';
+
 //import styles
 import '../../pages/about/about.css'
 // import translation
 import { t } from 'i18next';
 // import components
-import {personalInfo} from "../../../constants";
+import {personalInfo} from "../../constants";
 
-const Info = React.memo(
-    () => {
+const Info = () => {
     return (
         <>
             {personalInfo.map(({title,description},index) => {
@@ -20,7 +19,6 @@ const Info = React.memo(
             })}
         </>
     );
-})
-
+}
 
 export default Info;

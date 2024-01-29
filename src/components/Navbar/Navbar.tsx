@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import  {useState} from 'react';
 // import styles
 import './navbar.css'
 // import React Router DOM
@@ -6,9 +6,9 @@ import {NavLink} from "react-router-dom";
 //import translations
 import { t } from "i18next";
 // import constants
-import { navLinksData} from "../../../constants";
+import { navLinksData} from "../../constants";
 
-const Navbar = React.memo(
+const Navbar =
     () => {
 
         const [showMenu,setShowMenu] = useState<boolean>(false)
@@ -45,7 +45,7 @@ const Navbar = React.memo(
                     <span></span>
                 </div>
             </nav>
-        )})
+        )}
 
 
 

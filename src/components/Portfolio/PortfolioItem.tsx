@@ -1,11 +1,38 @@
-import React, {useState} from 'react';
+import  {useState} from 'react';
 // import  icon
 import Close from  '../../assets/close.svg'
 // import translation
 import { t } from "i18next";
 
-const PortfolioItem = React.memo(
-    ({img, title, details}) => {
+export type PortfolioItemPropsType = {
+    img:any,
+    title:string,
+    details: [
+        {
+            icon?: JSX.Element
+            title: string
+            desc: string
+        },
+        {
+            icon?: JSX.Element
+            title: string
+            desc: string
+        },
+        {
+            icon?: JSX.Element
+            title: string
+            desc: string
+        },
+        {
+            icon?: JSX.Element
+            title: string
+            desc: string
+        },
+    ]
+}
+
+const PortfolioItem =
+    ({img, title, details}:PortfolioItemPropsType) => {
         const [isModalOpen, setIsModalOpen] = useState(false)
 
         const toggleModal = () => {
@@ -63,8 +90,7 @@ const PortfolioItem = React.memo(
                 )}
             </div>
         );
-    })
-
+    }
 
 
 export default PortfolioItem;

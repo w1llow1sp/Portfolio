@@ -1,13 +1,11 @@
-import React from 'react';
-/*import {stats} from "../../utils/data";*/
 import parse from 'html-react-parser'
 import '../../pages/about/about.css'
-import {statsData} from "../../../constants";
+import {statsData} from "../../constants";
 // import translation
 import {t} from 'i18next';
 
 
-const Stats = React.memo(
+const Stats =
     () => {
         return (
             <>
@@ -22,6 +20,5 @@ const Stats = React.memo(
             </>
         );
     }
-);
 
 export default Stats;

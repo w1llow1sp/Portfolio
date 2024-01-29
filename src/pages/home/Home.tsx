@@ -1,5 +1,3 @@
-//import React
-import React from "react";
 //import styles
 import './home.css'
 //import components
@@ -14,7 +12,8 @@ import { FaArrowRight } from "react-icons/fa";
 // import translation
 import { t } from 'i18next';
 
-const Home = React.memo(() => {
+
+const Home =() => {
 
     return (
         <section className={'home section grid'}>
@@ -35,7 +34,7 @@ const Home = React.memo(() => {
                     animate="show"
                 >
                     <h1 className="home__title">
-                        <span>{t('home.title.hi')}</span>
+                        <span>{t('home.title.hi')} </span>
                         {t('home.title.text')}
                     </h1>
 
@@ -55,7 +54,8 @@ const Home = React.memo(() => {
             <div className="color__block"></div>
         </section>
     );
-})
+}
+
 export default transition(Home);
 
 

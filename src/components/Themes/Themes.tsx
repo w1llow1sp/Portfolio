@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import {useEffect, useState} from 'react';
 import './themes.css'
 //import picture
 import RU from '../../assets/ru.svg'
@@ -11,14 +11,11 @@ import ThemeItem from "./ThemeItem";
 import {FaCog} from "react-icons/fa";
 import {BsSun, BsMoon, BsTranslate} from "react-icons/bs";
 //
-import { useTranslation } from "react-i18next";
-import {themes} from "../../../constants";
+import {useTranslation} from "react-i18next";
+import {themes} from "../../constants";
 import {getStorageColor} from "../../utils/localStorage/getStorageColor";
 import {getStorageTheme} from "../../utils/localStorage/getStorageTheme";
-
-
-
-
+import LangButton from "./LangButton/LangButton";
 
 
 const Themes = () => {
@@ -26,16 +23,15 @@ const Themes = () => {
     const [showSwitcher, setShowSwitcher] = useState<boolean>(false);
     const [color, setColor] = useState<string>(getStorageColor());
     const [theme, setTheme] = useState(getStorageTheme());
-
-    {/*Language settings*/}
     const [isLangModalOpen, setIsLangModalOpen] = useState(false);
 
-    const { i18n } = useTranslation();
-    const changeLanguage = (lng: string) => {
-        i18n.changeLanguage(lng);
-        localStorage.setItem("lng", lng);
-    };
-    {/*Language settings*/}
+
+/*    const handleButtonClick = (lang:string) => {
+        setIsActive(!isActive);
+        setIsLangModalOpen(!isLangModalOpen)
+        changeLanguage(lang)
+    }*/
+
 
     const changeColor = (color: string) => {
         setColor(color)
@@ -59,10 +55,6 @@ const Themes = () => {
         document.documentElement.className = theme;
         localStorage.setItem('theme', theme)
     }, [theme]);
-
-    useEffect(() => {
-
-    }, []);
 
 
     return (
@@ -107,24 +99,33 @@ const Themes = () => {
             {/*Language Switch modal*/}
             <div className={`${isLangModalOpen ? 'show-switcher-lang' : ''} lang__switcher`}>
                 <div className={'lang__container'}>
-                    <button
-                        className={'lang__btn'}
-                        onClick={() => changeLanguage("ru")}>
-                        <img src={RU} alt="" className={'lang__icon'}/>
-                    </button>
+                    <LangButton
+                    img={RU}
+                    lang={'ru'}
+                    modalFunction={()=>setIsLangModalOpen(!isLangModalOpen)}
+                    isLangModalOpen={isLangModalOpen}
+                    />
+                    <LangButton
+                        img={EN}
+                        lang={'en'}
+                        modalFunction={()=>setIsLangModalOpen(!isLangModalOpen)}
+                        isLangModalOpen={isLangModalOpen}
+                        />
 
-                    <button
-                        className={'lang__btn'}
-                        onClick={() => changeLanguage("en")}>
-                        <img src={EN} alt="" className={'lang__icon'}/>
-                    </button>
+                    <div
+                        className="style__switcher-close"
+                        onClick={() => setIsLangModalOpen(!isLangModalOpen)}>
+                        &times;
+                    </div>
                 </div>
 
-                <div className="style__switcher-close" onClick={() => setIsLangModalOpen(!isLangModalOpen)}>&times;</div>
             </div>
             {/*Language Switch modal*/}
         </div>
     );
-};
+}
 
 export default Themes;
+
+
+

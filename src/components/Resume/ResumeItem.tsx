@@ -1,4 +1,4 @@
-import React from 'react';
+
 // import parser for
 import parse from 'html-react-parser'
 // import translation
@@ -12,7 +12,7 @@ type ResumeItemPropsType = {
 
 }
 
-const ResumeItem = React.memo(
+const ResumeItem =
     ({icon, year, title, desc}: ResumeItemPropsType) => {
         return (
             <div className="resume__item">
@@ -23,7 +23,7 @@ const ResumeItem = React.memo(
 
             </div>
         )
-    })
+    }
 
 
 export default ResumeItem;

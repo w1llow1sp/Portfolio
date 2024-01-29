@@ -1,13 +1,12 @@
-import React from 'react';
 //import styles
 import './skills.css'
 //import circular progressbar
 import {CircularProgressbarWithChildren} from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 // import constants
-import {skillsData} from "../../../constants";
+import {skillsData} from "../../constants";
 
-const Skills = React.memo(
+const Skills =
     () => {
     return (
         <>
@@ -34,6 +33,5 @@ const Skills = React.memo(
             })}
         </>
     );
-})
-
+}
 export default Skills;

@@ -1,4 +1,3 @@
-import React from "react";
 //import styles
 import './about.css'
 //import components
@@ -16,9 +15,9 @@ import CV from '../../assets/CV.pdf'
 // import translation
 import { t } from 'i18next';
 //import constants
-import {experienceAndEducation, sectionAboutText, skillsData} from "../../../constants";
+import {experienceAndEducation, sectionAboutText, skillsData} from "../../constants";
 
-const About = React.memo(
+const About =
     () => {
     return (
         <main className="section container">
@@ -121,7 +120,7 @@ const About = React.memo(
             {/* ===SECTION RESUME END=== */}
         </main>
     );
-})
+}
 export default transition(About);
 
 

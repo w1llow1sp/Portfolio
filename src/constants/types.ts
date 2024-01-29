@@ -56,7 +56,18 @@ export type portfolioObjType = {
             icon?: JSX.Element
             title: string
             desc: string
-        }]
+        },
+        {
+            icon?: JSX.Element
+            title: string
+            desc: string
+        },
+        {
+            icon?: JSX.Element
+            title: string
+            desc: string
+        },
+    ]
 }
 
 export type portfolioDataType = {
@@ -99,7 +110,7 @@ export type linksDataType = {
 export type skillsItemType = {
     id: number
     title: string
-    percentage: string
+    percentage: number
     img:any
 
 }

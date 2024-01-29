@@ -1,4 +1,4 @@
-import React from 'react';
+
 
 type ThemeItemPropsType = {
     color: string,

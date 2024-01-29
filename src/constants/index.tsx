@@ -8,33 +8,33 @@ import {
 } from "./types";
 import {FiExternalLink, FiFileText, FiUser} from "react-icons/fi";
 
-import Work1 from '../src/assets/Work1.png'
-import Work2 from '../src/assets/Work2.png'
-import Work3 from '../src/assets/Work3.png'
-import Work4 from '../src/assets/Work4.png'
-import Work5 from '../src/assets/Work5.png'
-import Work6 from '../src/assets/Work6.png'
-import Work7 from '../src/assets/Work7.png'
-import Work8 from '../src/assets/Work8.png'
-import Work9 from '../src/assets/Work9.png'
-import Work10 from '../src/assets/Work10.png'
-import Work11 from '../src/assets/Work11.png'
-import Work12 from '../src/assets/Work12.png'
-import Work13 from '../src/assets/Work13.png'
-import Work14 from '../src/assets/Work14.png'
-import Work15 from '../src/assets/Work15.png'
-import Work16 from '../src/assets/Work16.png'
+import Work1 from '../assets/Work1.png'
+import Work2 from '../assets/Work2.png'
+import Work3 from '../assets/Work3.png'
+import Work4 from '../assets/Work4.png'
+import Work5 from '../assets/Work5.png'
+import Work6 from '../assets/Work6.png'
+import Work7 from '../assets/Work7.png'
+import Work8 from '../assets/Work8.png'
+import Work9 from '../assets/Work9.png'
+import Work10 from '../assets/Work10.png'
+import Work11 from '../assets/Work11.png'
+import Work12 from '../assets/Work12.png'
+import Work13 from '../assets/Work13.png'
+import Work14 from '../assets/Work14.png'
+import Work15 from '../assets/Work15.png'
+import Work16 from '../assets/Work16.png'
 // import images
-import Theme1 from '../src/assets/purple.png';
-import Theme2 from '../src/assets/red.png';
-import Theme3 from '../src/assets/blueviolet.png';
-import Theme4 from '../src/assets/blue.png';
-import Theme5 from '../src/assets/goldenrod.png';
-import Theme6 from '../src/assets/magenta.png';
-import Theme7 from '../src/assets/yellowgreen.png';
-import Theme8 from '../src/assets/orange.png';
-import Theme9 from '../src/assets/green.png';
-import Theme10 from '../src/assets/yellow.png';
+import Theme1 from '../assets/purple.png';
+import Theme2 from '../assets/red.png';
+import Theme3 from '../assets/blueviolet.png';
+import Theme4 from '../assets/blue.png';
+import Theme5 from '../assets/goldenrod.png';
+import Theme6 from '../assets/magenta.png';
+import Theme7 from '../assets/yellowgreen.png';
+import Theme8 from '../assets/orange.png';
+import Theme9 from '../assets/green.png';
+import Theme10 from '../assets/yellow.png';
 
 import {
     SiAngular, SiFigma, SiJasmine,
@@ -162,102 +162,102 @@ export const skillsData: skillsDataType = {
         {
             id: 1,
             title: 'Typescript',
-            percentage: '70',
+            percentage: 70,
             img:<SiTypescript />
 
         },
         {
             id: 2,
             title: 'JavaScript',
-            percentage: '80',
+            percentage: 80,
             img:<SiJavascript />
         },
         {
             id: 3,
             title: 'React',
-            percentage: '85',
+            percentage: 85,
             img:<SiReact />
         }, {
             id: 4,
             title: 'Angular',
-            percentage: '60',
+            percentage: 60,
             img:<SiAngular />
         },
         {
             id: 5,
             title: 'NextJS',
-            percentage: '70',
+            percentage: 70,
             img:<SiNextdotjs />
         },
         {
             id: 6,
             title: 'Redux',
-            percentage: '70',
+            percentage: 70,
             img:<SiRedux />
         },
         {
             id: 7,
             title: 'Redux Toolkit',
-            percentage: '40',
+            percentage: 40,
             img:<SiRedux />
         },
         {
             id: 8,
             title: 'Rest API',
-            percentage: '80',
+            percentage: 80,
             img:<TbApi />
         },
         {
             id: 9,
             title: 'Storybook',
-            percentage: '70',
+            percentage: 70,
             img:<SiStorybook />
         },
         {
             id: 10,
             title: 'Unit Testing',
-            percentage: '70',
+            percentage: 70,
             img:<SiJest />
         },
         {
             id: 11,
             title: 'Jasmine',
-            percentage: '60',
+            percentage: 60,
             img:<SiJasmine />
         },
         {
             id: 12,
             title: 'UI Library',
-            percentage: '90',
+            percentage: 90,
             img:<SiTailwindcss />
         },
         {
             id: 13,
             title: 'Figma',
-            percentage: '80',
+            percentage: 80,
             img:<SiFigma />
         },
         {
             id: 14,
             title: 'Styled Components',
-            percentage: '75',
+            percentage: 75,
             img:<SiStyledcomponents />
         },
         {
             id: 15,
             title: 'HTML',
-            percentage: '80',
+            percentage: 80,
             img:<IoLogoHtml5 />
         },
         {
             id: 16,
             title: 'CSS',
-            percentage: '80',
+            percentage: 80,
             img:<IoLogoCss3 />
         }, {
             id: 17,
             title: 'SAAS/LESS/SCSS',
-            percentage: '70',
+            percentage: 70,
             img:<IoLogoSass />
         },
 

@@ -1,5 +1,3 @@
-//
-import React from "react";
 // import styles
 import './portfolio.css'
 // import components
@@ -7,12 +5,12 @@ import PortfolioItem from "../../components/Portfolio/PortfolioItem";
 // import animations
 import transition from "../../utils/transition";
 // import constants
-import {portfolioData} from "../../../constants";
+import {portfolioData} from "../../constants";
 //import translation
 import { t } from "i18next";
 
 
-const Portfolio = React.memo(
+const Portfolio =
     () => {
     return (
         <section className="portfolio section">
@@ -28,7 +26,7 @@ const Portfolio = React.memo(
             </div>
         </section>
     );
-})
+}
 
 
 export default  transition(Portfolio);

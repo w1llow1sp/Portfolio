@@ -1,4 +1,3 @@
-import React from "react";
 //import styles
 import './contact.css'
 // import icons
@@ -16,13 +15,13 @@ import { motion } from "framer-motion";
 //import translations
 import { t } from "i18next";
 //import constants
-import {contactsData} from "../../../constants";
+import {contactsData} from "../../constants";
 
 
 
 
 
-const Contact = React.memo(
+const Contact =
     () => {
         return (
             <section className={'contact section'}>
@@ -139,7 +138,7 @@ const Contact = React.memo(
                 </div>
             </section>
         );
-    })
+    }
 
 export default transition(Contact);
 
