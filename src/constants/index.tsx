@@ -8,33 +8,21 @@ import {
 } from "./types";
 import {FiExternalLink, FiFileText, FiUser} from "react-icons/fi";
 
-import Work1 from '../assets/Work1.png'
-import Work2 from '../assets/Work2.png'
-import Work3 from '../assets/Work3.png'
-import Work4 from '../assets/Work4.png'
-import Work5 from '../assets/Work5.png'
-import Work6 from '../assets/Work6.png'
-import Work7 from '../assets/Work7.png'
-import Work8 from '../assets/Work8.png'
-import Work9 from '../assets/Work9.png'
-import Work10 from '../assets/Work10.png'
-import Work11 from '../assets/Work11.png'
-import Work12 from '../assets/Work12.png'
-import Work13 from '../assets/Work13.png'
-import Work14 from '../assets/Work14.png'
-import Work15 from '../assets/Work15.png'
-import Work16 from '../assets/Work16.png'
-// import images
-import Theme1 from '../assets/purple.png';
-import Theme2 from '../assets/red.png';
-import Theme3 from '../assets/blueviolet.png';
-import Theme4 from '../assets/blue.png';
-import Theme5 from '../assets/goldenrod.png';
-import Theme6 from '../assets/magenta.png';
-import Theme7 from '../assets/yellowgreen.png';
-import Theme8 from '../assets/orange.png';
-import Theme9 from '../assets/green.png';
-import Theme10 from '../assets/yellow.png';
+//import images of works
+import {
+    Work1,Work2,Work3,
+    Work4,Work5,Work6,
+    Work7,Work8,Work9,
+    Work10,Work11,Work12,
+    Work13,Work14,Work15,
+    Work16} from "../assets";
+// import images for Theme
+import {
+    Theme1,Theme2,Theme3,
+    Theme4,Theme5,Theme6,
+    Theme7,Theme8,Theme9,
+    Theme10} from "../assets";
+
 // import icons
 import {
     SiAngular, SiFigma, SiJasmine,

@@ -1,7 +1,7 @@
 //import styles
 import './home.css'
 //import components
-import Profile from '../../assets/home.jpg'
+import Profile from '../../assets/home.webp'
 //import React Router Dom
 import { Link } from 'react-router-dom'
 //import transition
@@ -21,7 +21,6 @@ const Home =() => {
                 src={Profile}
                 alt=""
                 className="home__img"
-                loading={"lazy"}
                 variants={slideIn}
                 initial="hidden"
                 animate="show"

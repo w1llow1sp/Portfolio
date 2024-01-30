@@ -23,9 +23,11 @@ const Navbar = () => {
                         {navLinksData.map(({name, icon, path}, index) => {
                             return (
                                 <li className="nav__item" key={index}>
-                                    <NavLink to={path} className={({isActive}) => isActive
+                                    <NavLink
+                                        to={path}
+                                        aria-label={`Navigate to section${name}`}
+                                        className={({isActive}) => isActive
                                         ? 'nav__link active-nav' : 'nav__link'}
-
                                              onClick={toggleMenu}
                                     >
                                         {icon}

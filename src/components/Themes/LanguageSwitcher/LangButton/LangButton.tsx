@@ -37,6 +37,7 @@ const LangButton = ({
                 className={'lang__btn'}
                 onClick={() => handleButtonClick(lang)}>
                 <img src={img}
+                     id={lang}
                      alt=""
                      className={'lang__icon'}/>
             </button>
