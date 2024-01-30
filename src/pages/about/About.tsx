@@ -32,7 +32,7 @@ const About =
                         initial="hidden"
                         animate="show"
                     >
-                        <h3 className='section__subtitle'>Personal Infos</h3>
+                        <h3 className='section__subtitle'>{t(sectionAboutText.header.subtitle)}</h3>
                         <ul className="info__list grid">
                             <Info/>
                         </ul>

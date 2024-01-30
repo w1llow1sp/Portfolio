@@ -15,6 +15,7 @@ export type sectionAboutTextType = {
     header: {
         header: string
         spanName: string
+        subtitle:string
     },
     buttonText: {
         text: string

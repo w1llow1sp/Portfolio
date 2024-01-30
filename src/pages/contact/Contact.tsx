@@ -16,13 +16,83 @@ import { motion } from "framer-motion";
 import { t } from "i18next";
 //import constants
 import {contactsData} from "../../constants";
+import {ChangeEvent, FormEvent, useRef, useState} from "react";
+// import EmailJSService
+import emailjs from '@emailjs/browser';
 
 
+const Contact = () => {
+    const formRef = useRef<HTMLFormElement | null>(null);
+    const [form, setForm] = useState({
+        name: "",
+        email: "",
+        subject:"",
+        message: "",
+    });
+
+    const [loading, setLoading] = useState(false);
+
+    const handleChange = (
+        e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    ) => {
+        const { target } = e;
+        const { name, value } = target;
+
+        setForm({
+            ...form,
+            [name]: value,
+        });
+    };
+
+    const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+
+        // valid
+        if (!form.name.length || !form.email.length) {
+            alert(t("contact.no_valid"));
+            return;
+        }
+
+        setLoading(true);
+
+        emailjs
+            .send(
+                import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
+                import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
+                {
+                    from_name: form.name,
+                    to_name: "Сайт портфолио w1llow1sp",
+                    from_email: form.email,
+                    to_email: "mari.74.front@gmail.com",
+                    message: form.message,
+                    user_email:form.email,
+                    user_subject:form.subject,
+                    user_name:form.name
+                },
+                import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
+            )
+            .then(
+                () => {
+                    setLoading(false);
+                    alert(t("contact.thank"));
+
+                    setForm({
+                        name: "",
+                        email: "",
+                        subject:"",
+                        message: "",
+                    });
+                },
+                (error) => {
+                    setLoading(false);
+                    console.error(error);
+
+                    alert(t("contact.wrong"));
+                }
+            );
+    };
 
 
-
-const Contact =
-    () => {
         return (
             <section className={'contact section'}>
                 <h2 className={'section__title'}>
@@ -103,32 +173,49 @@ const Contact =
                         </div>
                     </div>
 
-                    <form className="contact__form">
+                    <form
+                        ref={formRef}
+                        onSubmit={handleSubmit}
+                        className="contact__form">
                         <div className="form__input-group">
                             <div className="form__input-div">
                                 <input type="text"
+                                       name={'name'}
+                                       value={form.name}
+                                       onChange={handleChange}
                                        placeholder={`${t(contactsData.formText.name)}`}
                                        className="form__control"/>
                             </div>
 
                             <div className="form__input-div">
                                 <input type="email"
+                                       name={'email'}
+                                       value={form.email}
+                                       onChange={handleChange}
                                        placeholder={`${t(contactsData.formText.mail)}`}
                                        className="form__control"/>
                             </div>
 
                             <div className="form__input-div">
                                 <input type="text"
+                                       name={'subject'}
+                                       value={form.subject}
+                                       onChange={handleChange}
                                        placeholder={`${t(contactsData.formText.subject)}`}
                                        className="form__control"/>
                             </div>
                         </div>
                         <div className="form__input-div">
                         <textarea
+                            name={'message'}
+                            value={form.message}
+                            onChange={handleChange}
                             placeholder={`${t(contactsData.formText.message)}`}
                             className={'form__control textarea'}></textarea>
                         </div>
-                        <button className="button">
+                        <button
+                            type={"submit"}
+                            className="button">
                             {`${t(contactsData.formText.btnText)}`}
                             <span className={'button__icon contact__button-icon'}>
                             <FiSend/>

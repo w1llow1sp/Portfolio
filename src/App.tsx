@@ -14,8 +14,6 @@ import {AnimatePresence} from "framer-motion";
 import {useTranslation } from "react-i18next";
 
 
-// остальной код
-
 
 const App = memo(() => {
     const location = useLocation()

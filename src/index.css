@@ -188,6 +188,9 @@
 }
 
 @media screen and (max-width: 576px) {
+    .section {
+        margin: 30px;
+    }
 
     .nav__toggle {
         top: 20px;
@@ -211,6 +214,7 @@
         grid-template-columns: 1fr;
     }
 
+
     .modal__list {
         grid-template-columns: 1fr;
     }
@@ -228,13 +232,28 @@
     }
 
     .style__switcher-toggler,
-    .theme__toggler {
+    .theme__toggler,
+    .language__toggler{
         width: 40px;
         height: 40px;
     }
 
     .style__switcher-toggler {
         top: 15%;
+    }
+
+    .language__toggler {
+        top: 92%;
+    }
+
+    .show-switcher-lang,
+    .lang__switcher {
+        padding: 2px;
+        height: 40px;
+    }
+
+    .lang__switcher{
+        top: 24%;
     }
 
     .theme__toggler {

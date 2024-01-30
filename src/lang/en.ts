@@ -568,7 +568,12 @@ const en = {
                 subject:'Your Subject',
                 message:'Your Message',
                 btnText:'Send Message'
-            }
+            },
+            send: "Send",
+            sending: "Sending...",
+            thank: "Thank you. I will get back to you as soon as possible.",
+            wrong: "Ahh, something went wrong. Please try again.",
+            no_valid: "Enter something!",
         },
         themeSwitcher: {
             header:'Style Switcher'

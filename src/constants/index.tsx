@@ -123,7 +123,8 @@ export const personalInfo: personalInfoDataType[] = [
 export const sectionAboutText: sectionAboutTextType = {
     header: {
         header: 'about.header.header',
-        spanName: 'about.header.spanName'
+        spanName: 'about.header.spanName',
+        subtitle:'about.personalInfo.header'
     },
     buttonText: {
         text: 'about.buttonText.text'
