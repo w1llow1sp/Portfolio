@@ -1,4 +1,4 @@
-import {useState} from "react";
+
 // import translation
 import {useTranslation} from "react-i18next";
 // import styles
@@ -18,7 +18,6 @@ const LangButton = ({
                         modalFunction,
                         isLangModalOpen,
                         lang,
-                        activeLang
                     }:LangButtonPropsType) => {
     const {i18n} = useTranslation();
 
