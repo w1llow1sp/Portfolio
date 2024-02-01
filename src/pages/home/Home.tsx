@@ -49,8 +49,8 @@ const Home =() => {
         </section>
     );
 }
-
-export default transition(Home);
-
+/*
+export default transition(Home);*/
+export default Home;
 
 
