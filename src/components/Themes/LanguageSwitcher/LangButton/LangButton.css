@@ -12,4 +12,5 @@
 .lang__icon {
     width: 27px;
     height: 27px;
+    aspect-ratio: 1/1;
 }
