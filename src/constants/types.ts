@@ -98,6 +98,7 @@ export type contactDataType = {
         subject:string
         message:string
         btnText:string
+        sending:string
     }
 }
 

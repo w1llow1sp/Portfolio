@@ -762,6 +762,7 @@ export const contactsData : contactDataType = {
         subject:'contact.formText.subject',
         message:'contact.formText.message',
         btnText:'contact.formText.btnText',
+        sending:'contact.formText.sending'
     }
 }
 export const themes:themesType[] = [
