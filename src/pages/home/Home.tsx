@@ -26,12 +26,12 @@ const Home =() => {
                 animate="show"
             />
             <div className="home__content">
-                <motion.div
+             {/*   <motion.div
                     className="home__data"
                     variants={slideIn}
                     initial="hidden"
                     animate="show"
-                >
+                >*/}
                     <h1 className="home__title">
                         <span>{t('home.title.hi')} </span>
                         {t('home.title.text')}
@@ -47,7 +47,7 @@ const Home =() => {
                            <FaArrowRight/>
                         </span>
                     </Link>
-                </motion.div>
+                {/*</motion.div>*/}
             </div>
 
             <div className="color__block"></div>
