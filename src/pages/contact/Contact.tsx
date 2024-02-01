@@ -216,7 +216,9 @@ const Contact = () => {
                         <button
                             type={"submit"}
                             className="button">
-                            {`${t(contactsData.formText.btnText)}`}
+                            {loading
+                                ? `${t(contactsData.formText.sending)}`
+                                : `${t(contactsData.formText.btnText)}`}
                             <span className={'button__icon contact__button-icon'}>
                             <FiSend/>
                         </span>

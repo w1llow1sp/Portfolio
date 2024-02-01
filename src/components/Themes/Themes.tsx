@@ -23,7 +23,6 @@ const Themes = () => {
     const [color, setColor] = useState<string>(getStorageColor());
     const [theme, setTheme] = useState(getStorageTheme());
     const [isLangModalOpen, setIsLangModalOpen] = useState(false);
-    const [activeLang, setActiveLang] = useState('');
 
 
     const changeColor = (color: string) => {
@@ -98,14 +97,14 @@ const Themes = () => {
                         lang={'ru'}
                         modalFunction={() => setIsLangModalOpen(!isLangModalOpen)}
                         isLangModalOpen={isLangModalOpen}
-                        activeLang={activeLang}
+
                     />
                     <LangButton
                         img={EN}
                         lang={'en'}
                         modalFunction={() => setIsLangModalOpen(!isLangModalOpen)}
                         isLangModalOpen={isLangModalOpen}
-                        activeLang={activeLang}
+
                     />
 
                     <div

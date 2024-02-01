@@ -9,7 +9,6 @@ export type LangButtonPropsType = {
     modalFunction:(isLangModalOpen:boolean) => void
     isLangModalOpen:boolean
     lang:string
-    activeLang: string
 }
 
 
@@ -35,6 +34,8 @@ const LangButton = ({
         <>
             <button
                 className={'lang__btn'}
+                aria-label={`Смена языка на ${lang
+                }`}
                 onClick={() => handleButtonClick(lang)}>
                 <img src={img}
                      id={lang}
