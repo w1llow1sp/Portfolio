@@ -6,7 +6,7 @@ import Profile from '../../assets/home.webp'
 import { Link } from 'react-router-dom'
 //import transition
 import { motion } from "framer-motion";
-import transition, {slideIn} from "../../utils/transition";
+import  {slideIn} from "../../utils/transition";
 //import icons
 import { FaArrowRight } from "react-icons/fa";
 // import translation
@@ -49,8 +49,7 @@ const Home =() => {
         </section>
     );
 }
-/*
-export default transition(Home);*/
+
 export default Home;
 
 
