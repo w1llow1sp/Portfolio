@@ -8,7 +8,11 @@ type ThemeItemPropsType = {
 
 const ThemeItem = ({color, img, changeColor}: ThemeItemPropsType) => {
     return (
-        <img src={img} alt="" className="theme__img" onClick={()=>changeColor(color)}/>
+        <img
+             src={img}
+             alt=""
+             className="theme__img"
+             onClick={()=>changeColor(color)}/>
     )
 
 

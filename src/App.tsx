@@ -1,9 +1,9 @@
+// import styles
+import './App.css'
 // import React
 import {memo, useEffect} from "react";
 //import React Router Dom
 import {Routes,Route, useLocation} from "react-router-dom";
-// import styles
-import './App.css'
 //import pages
 import {About, Contact, Home, Portfolio} from "./pages";
 // import components
